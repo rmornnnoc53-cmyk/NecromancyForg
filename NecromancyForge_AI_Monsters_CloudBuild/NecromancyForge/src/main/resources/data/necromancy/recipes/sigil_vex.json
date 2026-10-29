@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " F ",
+    "FSF",
+    " F "
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "S": {
+      "item": "necromancy:soul"
+    }
+  },
+  "result": {
+    "item": "necromancy:sigil_vex"
+  }
+}

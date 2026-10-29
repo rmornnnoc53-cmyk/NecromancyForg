@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " B ",
+    "BSB",
+    " B "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "S": {
+      "item": "necromancy:soul"
+    }
+  },
+  "result": {
+    "item": "necromancy:sigil_skeleton"
+  }
+}

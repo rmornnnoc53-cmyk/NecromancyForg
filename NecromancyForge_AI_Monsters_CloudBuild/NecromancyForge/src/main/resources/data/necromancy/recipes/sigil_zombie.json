@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " R ",
+    "RSR",
+    " R "
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "S": {
+      "item": "necromancy:soul"
+    }
+  },
+  "result": {
+    "item": "necromancy:sigil_zombie"
+  }
+}
