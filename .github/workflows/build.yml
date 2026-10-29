@@ -20,8 +20,12 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.8'
-      - run: gradle -p NecromancyForge build
-      - uses: actions/upload-artifact@v4
+      - name: Build mod
+        run: gradle build
+        working-directory: NecromancyForge
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
         with:
           name: Necromancy-Forge-1.20.1
           path: NecromancyForge/build/libs/*.jar
