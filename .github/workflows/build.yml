@@ -22,11 +22,10 @@ jobs:
           gradle-version: '8.8'
       - name: Build mod
         run: gradle build
-        working-directory: NecromancyForge
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: Necromancy-Forge-1.20.1
-          path: NecromancyForge/build/libs/*.jar
+          path: build/libs/*.jar
           if-no-files-found: error
