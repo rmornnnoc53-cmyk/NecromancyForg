@@ -21,13 +21,23 @@ jobs:
         with:
           gradle-version: '8.8'
       
-      - name: Build mod
-        run: gradle -p NecromancyForge build
+     
+      - name: Locate and build mod
+        shell: bash
+        run: |
+          BUILD_FILE=$(find . -name build.gradle -not -path '*/.gradle/*' -print -quit)
+          if [ -z "$BUILD_FILE" ]; then
+            echo "ERROR: build.gradle not found"
+            find . -maxdepth 3 -type f
+            exit 1
+          fi
+          echo "Found project: $BUILD_FILE"
+          cd "$(dirname "$BUILD_FILE")"
+          gradle build
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: Necromancy-Forge-1.20.1
-          path: NecromancyForge/build/libs/*.jar
+          path: '**/build/libs/*.jar'
           if-no-files-found: error
-
