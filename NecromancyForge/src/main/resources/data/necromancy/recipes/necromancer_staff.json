@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": ["  S", " B ", "B  "],
-  "key": {
-    "S": { "item": "necromancy:soul" },
-    "B": { "item": "minecraft:bone" }
-  },
-  "result": { "item": "necromancy:necromancer_staff" }
-}
